@@ -1,7 +1,7 @@
 from api import PetFriends
 from settings import *
-import requests
-import json
+# import requests
+# import json
 
 pets = PetFriends()
 
@@ -39,7 +39,7 @@ def test_post_create_new_pet_with_photo():
     status, result = pets.post_add_new_pet_with_photo(auth_key['key'],
                                                       name='Barsic',
                                                       animal_type='Demonic Cat',
-                                                      age='13',
+                                                      age=13,
                                                       pet_photo=pet1photo
                                                       )
     assert status == 200
@@ -91,7 +91,7 @@ def test_post_create_new_pet_no_photo():
     status, result = pets.post_add_new_pet_no_photo(auth_key['key'],
                                                     name='Bobik',
                                                     animal_type='Angel Dog',
-                                                    age='7'
+                                                    age=7
                                                     )
     assert status == 200
     assert result['name'] == 'Bobik'
@@ -133,7 +133,7 @@ def test_put_update_pet_info():
                                                   pet_id=last_pet_id,
                                                   name='Sonic',
                                                   animal_type='Supersonic Hedgehog',
-                                                  age='15'
+                                                  age=15
                                                   )
         edited_pet_id = result['id']
         assert status == 200
@@ -147,11 +147,13 @@ def test_put_update_pet_info():
 # Негативный тест - Попытка авторизации (получения API key)) с валидным email и невалидным password
 # Негативный тест - Попытка получения списка всех питомцев по невалидному API key
 # Негативный тест - Попытка получения списка моих питомцев по невалидному API key
+# Негативный тест - Попытка получения списка питомцев по невалидному парамерту filter = 'not_valid_filter'
 # Негативный тест - Попытка удаления питомца с невалидным id
 # Негативный тест - Попытка удаления чужого питомца с валидным id
 # Негативный тест - Попытка добавления питомца с фотографией 190 мегабайт
 # Негативный тест - Попытка добавления питомца с txt-файлом вместо фотографии
 # Негативный тест - Попытка добавления питомца с отрицательным возрастом
-# Негативный тест - Попытка добавления питомца с очень длинным именем
+# Негативный тест - Попытка добавления питомца со строковым значением возраста возрастом
+# Негативный тест - Попытка добавления питомца с очень длинным именем > 255 символов
 
 # Готовые тест-кейсы разместите на GitHub и пришлите ссылку.

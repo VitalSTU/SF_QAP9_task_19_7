@@ -52,7 +52,7 @@ class PetFriends:
             result = res.text
         return status, result
 
-    def post_add_new_pet_with_photo(self, auth_key: str, name: str, animal_type: str, age: str, pet_photo: str):
+    def post_add_new_pet_with_photo(self, auth_key: str, name: str, animal_type: str, age: int, pet_photo: str):
         data = MultipartEncoder(
             fields={
                 'name': name,
@@ -75,7 +75,7 @@ class PetFriends:
             result = res.text
         return status, result
 
-    def post_add_new_pet_no_photo(self, auth_key: str, name: str, animal_type: str, age: str):
+    def post_add_new_pet_no_photo(self, auth_key: str, name: str, animal_type: str, age: int):
         data = {
             'name': name,
             'animal_type': animal_type,
@@ -122,7 +122,7 @@ class PetFriends:
         status = res.status_code
         return status
 
-    def put_update_pet_info(self, auth_key: str, pet_id: str, name: str, animal_type: str, age: str):
+    def put_update_pet_info(self, auth_key: str, pet_id: str, name: str, animal_type: str, age: int):
         headers = {
             'auth_key': auth_key
         }
