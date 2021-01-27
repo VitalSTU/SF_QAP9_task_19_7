@@ -6,7 +6,7 @@ from settings import *
 pets = PetFriends()
 
 
-def test_get_api_key_for_valid_user(email=valid_email, password=valid_password):
+def test_positive_get_api_key_for_valid_user(email=valid_email, password=valid_password):
     """Method makes API request. Returns request status code and user unique API key in JSON format
 
     :param email:
@@ -18,7 +18,7 @@ def test_get_api_key_for_valid_user(email=valid_email, password=valid_password):
     assert 'key' in result
 
 
-def test_get_list_of_all_pets_valid_key(filter=''):
+def test_positive_get_list_of_all_pets_valid_key(filter=''):
     """Method makes API request. Returns request status code and list of all pets in JSON format according to filter
 
     :param filter:
@@ -30,7 +30,7 @@ def test_get_list_of_all_pets_valid_key(filter=''):
     assert len(result['pets']) > 0
 
 
-def test_post_create_new_pet_with_photo():
+def test_positive_post_create_new_pet_with_photo():
     """Method makes API request for new pet with photo creation.
 
     :return:
@@ -46,7 +46,7 @@ def test_post_create_new_pet_with_photo():
     assert result['name'] == 'Barsic'
 
 
-def test_get_list_of_my_pets_valid_key(filter='my_pets'):
+def test_positive_get_list_of_my_pets_valid_key(filter='my_pets'):
     """Method makes API request. Returns request status code and list of my pets in JSON format according to filter
 
     :param filter:
@@ -59,7 +59,7 @@ def test_get_list_of_my_pets_valid_key(filter='my_pets'):
     assert len(result['pets']) > 0
 
 
-def test_delete_pet():
+def test_positive_delete_pet():
     """Method deletes last pet
 
     :return:
@@ -82,7 +82,7 @@ def test_delete_pet():
         raise Exception('There is no pets in list to be deleted')
 
 
-def test_post_create_new_pet_no_photo():
+def test_positive_post_create_new_pet_no_photo():
     """Method makes API request for new pet with no photo creation.
 
     :return:
@@ -97,7 +97,7 @@ def test_post_create_new_pet_no_photo():
     assert result['name'] == 'Bobik'
 
 
-def test_post_set_pet_photo():
+def test_positive_post_set_pet_photo():
     """Method sets photo for last pet
 
     :return:
@@ -121,7 +121,7 @@ def test_post_set_pet_photo():
         raise Exception('There is no pets in list to be updated')
 
 
-def test_put_update_pet_info():
+def test_positive_put_update_pet_info():
     _, auth_key = pets.get_api_key(valid_email, valid_password)
     _, answer = pets.get_list_of_pets(auth_key['key'], filter='my_pets')
     pets_list = answer['pets']
@@ -143,7 +143,6 @@ def test_put_update_pet_info():
 
 # 19.7 Practice:
 
-# Негативный тест - Попытка регистрации с email неправильного формата
 # Негативный тест - Попытка авторизации (получения API key)) с валидным email и невалидным password
 # Негативный тест - Попытка получения списка всех питомцев по невалидному API key
 # Негативный тест - Попытка получения списка моих питомцев по невалидному API key

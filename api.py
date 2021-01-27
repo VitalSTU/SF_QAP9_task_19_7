@@ -138,4 +138,3 @@ class PetFriends:
         except:
             result = res.text
         return status, result
-
