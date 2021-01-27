@@ -39,7 +39,7 @@ def test_post_create_new_pet_with_photo():
     status, result = pets.post_add_new_pet_with_photo(auth_key['key'],
                                                       name='Barsic',
                                                       animal_type='Demonic Cat',
-                                                      age=13,
+                                                      age='13',
                                                       pet_photo=pet1photo
                                                       )
     assert status == 200

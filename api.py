@@ -52,7 +52,7 @@ class PetFriends:
             result = res.text
         return status, result
 
-    def post_add_new_pet_with_photo(self, auth_key: str, name: str, animal_type: str, age: int, pet_photo: str):
+    def post_add_new_pet_with_photo(self, auth_key: str, name: str, animal_type: str, age: str, pet_photo: str):
         data = MultipartEncoder(
             fields={
                 'name': name,
