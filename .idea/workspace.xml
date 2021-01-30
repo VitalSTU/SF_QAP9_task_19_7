@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9181c972-1965-48c7-a434-d38b391caa7b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/get_token.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_pet_friends.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_pet_friends.py" afterDir="false" />
     </list>
@@ -143,8 +141,8 @@
       <item itemvalue="Python tests.All tests at once" />
       <item itemvalue="Python tests.pytest for get_token.test_get_api_key_for_valid_user" />
       <item itemvalue="Python tests.pytest for test_pet_friends.test_get_list_of_all_pets_valid_key" />
-      <item itemvalue="Python tests.pytest for test_pet_friends.test_positive_get_list_of_my_pets_valid_key" />
       <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_new_usernotvalid_email" />
+      <item itemvalue="Python tests.pytest for test_pet_friends.test_positive_get_list_of_my_pets_valid_key" />
     </list>
     <recent_temporary>
       <list>
