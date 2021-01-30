@@ -1,0 +1,923 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Функции"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "djL0UFMoIgyt"
+   },
+   "source": [
+    "Функция это блок организованного, многократно используемоего кода, который используется для выполнения конкретного задания. Функции обеспечивают лучшую модульность приложения и значительно повышают уровень повторного использования кода."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Функция представляет собой подпрограмму, которую можно вызвать из основной программы, причем неоднократно. Повторяющийся (да и не только) блок программного кода обычно обозначают некоторым уникальным именем, чтобы потом при необходимости обратиться к нему по этому имени. "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {
+    "id": "veWjkUwNIgzL"
+   },
+   "source": [
+    "### Создание функции\n",
+    "\n",
+    "Существуют некоторые правила для создания функций в Python:\n",
+    "\n",
+    "- Блок функции начинается с ключевого слова def, после которого следуют название функции и круглые скобки ()\n",
+    "\n",
+    "- Любые аргументы, которые принимает функция должны находиться внутри этих скобок.\n",
+    "\n",
+    "- После скобок идет двоеточие ( : ) и с новой строки с отступом начинается тело функции.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def hello():\n",
+    "    print('Hello')\n",
+    "    return"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "hello()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "var123 = hello()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"Hello\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(var123)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### return\n",
+    "\n",
+    "- Выражение return прекращает выполнение функции и возвращает указанное после выражения значение. \n",
+    "\n",
+    "- Выражение return без аргументов это то же самое, что и выражение return None. \n",
+    "\n",
+    "- Соответственно, теперь становится возможным, например, присваивать результат выполнения функции какой либо переменной."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def func1(x, y):\n",
+    "    3 + 5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def func2():\n",
+    "    return 3 + 5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(func1())\n",
+    "print(func2())"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Функции являются объектами в языке Python, а это значит, например, что функцию можно присваивать в переменную"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "var1 = func2\n",
+    "var2 = func2()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(var1)\n",
+    "print(var2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "var1()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Аргументы и параметры функции\n",
+    "\n",
+    "Когда мы объявляем функцию, мы указываем параметры. Это могут быть любые переменные, которые мы объявили внутри функции\n",
+    "Когда мы вызываем функцию, то передаем в вызов переменные (аргументы). Это могут быть любые переменные, которые мы объявили вне функции\n",
+    "\n",
+    "Вызывая функцию, мы можем передавать ей следующие типы аргументов:\n",
+    "\n",
+    "- Обязательные аргументы (Required arguments)\n",
+    "- Аргументы-ключевые слова (Keyword argument)\n",
+    "- Аргументы произвольной длины (Variable-length argumens)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def square(x):\n",
+    "    return x * x"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "square(15)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "y = 10\n",
+    "print(square(y))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 5\n",
+    "\n",
+    "def square(x):\n",
+    "    \"\"\"Эта функция выводит квадрат числа\"\"\"\n",
+    "    return x * x\n",
+    "\n",
+    "print(square(x))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "help(square)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Какие бывают аргументы?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def example(n):\n",
+    "    return n\n",
+    "\n",
+    "example(1)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def person(name, age):\n",
+    "    print(\"Меня зовут \", name, \"и мне \", age)\n",
+    "\n",
+    "person(age=23, name=\"Федор\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def my_city(name, city=\"Москва\"):\n",
+    "    print(name, \"живет в городе\", city)\n",
+    "\n",
+    "my_city(\"Федор\")\n",
+    "\n",
+    "my_city(\"Федор\", city=\"Екатеринбург\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Иногда возникает ситуация, когда вы заранее не знаете, какое количество аргументов будет необходимо принять функции. В этом случае следует использовать аргументы произвольной длины. Они задаются произвольным именем переменной, перед которой ставится звездочка (*)."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def unknown(*args):\n",
+    "    for argument in args:\n",
+    "        print(argument)\n",
+    "        \n",
+    "unknown(\"hello\",\"world\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "unknown(1,2,3,4,5)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Также существуют именованные аргументы произвольной длины. Они также задаются произвольным именем, но перед ними ставится уже 2 звездочки (**)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def list_market(**products):\n",
+    "    for name, cost in products.items():\n",
+    "        print('Товар -', name, 'Цена -', cost)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "list_market(помидоры=200, огурцы=70, шоколадки=[50, 25, 40])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Области видимости\n",
+    "\n",
+    "Область видимости указывает интерпретатору, когда наименование (или переменная) видимо. Другими словами, область видимости определяет, когда и где вы можете использовать свои переменные, функции, и т.д. Если вы попытаетесь использовать что-либо, что не является в вашей области видимости, вы получите ошибку NameError.\n",
+    "\n",
+    "Python содержит два  типа области видимости:\n",
+    "\n",
+    "- Локальная область видимости\n",
+    "- Глобальная область видимости"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Переменные объявленные внутри тела функции имеют локальную область видимости, те что объявлены вне какой-либо функции имеют глобальную область видимости.\n",
+    "\n",
+    "Это означает, что доступ к локальным переменным имеют только те функции, в которых они были объявлены, в то время как доступ к глобальным переменным можно получить по всей программе в любой функции."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 10\n",
+    " \n",
+    "def info():\n",
+    "    print(x)\n",
+    "\n",
+    "def local_info():\n",
+    "    x = 15\n",
+    "    print(x)\n",
+    "    \n",
+    "\n",
+    "def local_info_2():\n",
+    "    x = 20\n",
+    "    print(x)\n",
+    "\n",
+    "info()\n",
+    "local_info()\n",
+    "local_info_2()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Важно помнить, что для того чтобы получить доступ к глобальной переменной, достаточно лишь указать ее имя. \n",
+    "\n",
+    "Однако, если перед нами стоит задача изменить глобальную переменную внутри функции - необходимо использовать ключевое слово global.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 15\n",
+    "\n",
+    "def new_info():\n",
+    "    x = 10\n",
+    "    print(x)\n",
+    "\n",
+    "new_info()\n",
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = 15\n",
+    "\n",
+    "def new_info():\n",
+    "    global x\n",
+    "    x = 10\n",
+    "    print(x)\n",
+    "\n",
+    "new_info()\n",
+    "print(x)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Рекурсия\n",
+    "\n",
+    "Рекурсия — это когда объект является частью самого себя.\n",
+    "\n",
+    "Рекурсивная функция - функция, которая при вызове возвращает саму себя."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "http://www.pythontutor.com/visualize.html#mode=edit"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def fibonacci(n):\n",
+    "    if n <= 2:\n",
+    "        return 1\n",
+    "    return fibonacci(n-1) + fibonacci(n-2)\n",
+    "    \n",
+    "number = int(input('Введите число: '))\n",
+    "\n",
+    "print(fibonacci(number))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "1 1 2 3 5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def factorial(n):\n",
+    "    if n == 0:\n",
+    "        return 1\n",
+    "    else:\n",
+    "        return factorial(n - 1) * n\n",
+    "\n",
+    "number = int(input('Введите число: '))\n",
+    "\n",
+    "print(factorial(number))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "x = [1, 2, 3, 4]\n",
+    "sum(x)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Функция map"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Мы видели, что можем передавать функцию как переменную. При работе с данными часто используется библиотечная функция map, которая как раз одним из аргументов принимает функцию. Map применяет эту функцию к каждому элементу списка, который мы передаём вторым аргументом. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def polite_name(name):  \n",
+    "    return 'Mr. ' + name   \n",
+    "  \n",
+    "guests = [\"Boris\", \"Ivan\", \"Bob\"]\n",
+    "guest_iterator = map(polite_name, guests)\n",
+    "print(list(guest_iterator))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Мы также можем использовать map со встроенными функциями:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "num_strings = [\"10\", \"1\", \"4.2\", \"0.73\"]  \n",
+    "  \n",
+    "print(list(map(float, num_strings)))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Выше мы использовали list, чтобы увидеть результат вычисления map. Это потому, что map возвращает ленивый итератор (объект типа map) и перед выводом его надо как-то «обналичить», например, приведя к списку."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "num_strings = [\"10\", \"1\", \"4.2\", \"0.73\"]  \n",
+    "  \n",
+    "print(map(float, num_strings))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Лямбда-функции\n",
+    "\n",
+    "На практике функции для map часто бывают короткими и используются только один раз. В этом случае удобно применять так называемые анонимные функции (или лямбда-функции) — они позволяют определять функции лаконичнее, прямо в месте использования.\n",
+    "\n",
+    "Анонимные функции могут содержать лишь одно выражение и им необязательно давать имя. Анонимные функции создаются с помощью инструкции lambda и немного отличающимся синтаксисом. Давайте посмотрим на них."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "func = lambda x, y: x + y  \n",
+    "\n",
+    "print(func(1, 2))\n",
+    "print(func('a', 'b'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print((lambda x: x**2)(8))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Если сравнивать определение обычной функции и лямбда-функции:\n",
+    "\n",
+    "- пишем lambda вместо def\n",
+    "- не пишем название функции (потому и анонимная)\n",
+    "- аргументы без скобок\n",
+    "- только одно выражение и оно же возвращается; return не пишется"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def name(x, y):  \n",
+    "    return x + y  \n",
+    "\n",
+    "name2 = lambda x, y: x + y"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(name(1, 2))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(name2(1, 2))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### filter\n",
+    "\n",
+    "Есть ещё одна полезная функция, похожая на map — filter. Она также принимает на вход произвольную функцию и коллекцию. Разница в том, что filter не меняет элементы, а отфильтровывает коллекцию, оставляя или выбрасывая элементы в зависимости от значения функции."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "nums = [1, 20, 30, 33, 16, 5]\n",
+    "\n",
+    "list(filter(lambda x: x < 30, nums))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "def odd_num(x):\n",
+    "     return x % 2 == 1\n",
+    "\n",
+    "print(list(filter(odd_num, nums)))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Filter применяет переданную функцию последовательно к каждому элементу и ожидает, что функция вернёт булево значение True/False. На выход она возвращает только те элементы, для которых значение было True."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "## Основы объектно-ориентированного программирования"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "ООП - методология программирования, основанная на представлении программы в виде совокупности объектов, каждый из которых является экземпляром определённого класса, а классы образуют иерархию наследования."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Классы\n",
+    "Все объекты в Python относятся к определенному классу. Чтобы узнать, к какому именно, нужно посмотреть на значение атрибута __class__."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "number = 2.5  \n",
+    "print(number.__class__)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "people = [\"Vasiliy\", \"Stanislav\", \"Alexandra\", \"Vasiliy\"]  \n",
+    "print(people.__class__)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Методы класса"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "len('abcdefg')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "new_string = 'abcdefg'\n",
+    "new_string.replace('a', 'b')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "my_list = [2, 6, 7, 12, 4]\n",
+    "\n",
+    "print(sorted(my_list))\n",
+    "print(my_list)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(my_list.sort())\n",
+    "print(my_list)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Метод - это функция, которая принадлежит определенному классу, т.е. определяет действия, которые можно выполнять над объектом такого типа, или которые сам объект может выполнять."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Атрибуты класса\n",
+    "Помимо методов, которые определяют действия, выполняемые объектами класса или над ними, класс также может содержать атрибуты. \n",
+    "\n",
+    "Если методы - это функции, принадлежащие классу, то атрибуты - принадлежащие классу переменные или константы.\n",
+    "\n",
+    "Атрибуты призваны хранить необходимые в программе параметры объекта, которые задают его состояние и описывают его свойства.\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Основные моменты\n",
+    "- Атрибут объекта — это просто его переменная.\n",
+    "- Метод объекта — это его функция.\n",
+    "- Метод объекта автоматически получает первым аргументом сам объект под именем self.\n",
+    "- Класс описывает объект через его атрибуты и методы.\n",
+    "- Мы можем создавать множество экземпляров одного класса и значение их атрибутов независимы друг от друга.\n",
+    "- Если определить метод __init__, то он будет выполняться при создании объекта.\n",
+    "- Всё это позволяет компактно увязывать данные и логику внутри объекта."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### Создадим свой класс"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class FootballClub:\n",
+    "    pass"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Ivanov = FootballClub()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "type(Ivanov)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Ivanov.name = 'Ivanov'"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Ivanov.name"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "class FootballClub:\n",
+    "    squad = {}\n",
+    "    def __init__(self, name, goals=0):\n",
+    "        self.name = name\n",
+    "        self.goals = goals\n",
+    "        FootballClub.squad[self.name] = self.goals\n",
+    "    def scored(self, goals):\n",
+    "        self.goals += goals\n",
+    "        FootballClub.squad[self.name] = self.goals"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Ivanov = FootballClub('Ivanov', 0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Petrov = FootballClub('Petrov', 0)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "FootballClub.squad"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.1"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 4
+}

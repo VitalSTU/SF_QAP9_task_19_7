@@ -52,7 +52,11 @@ class PetFriends:
             result = res.text
         return status, result
 
-    def post_add_new_pet_with_photo(self, auth_key: str, name: str, animal_type: str, age: str, pet_photo: str):
+    def post_add_new_pet_with_photo(self, auth_key: str, name: str, animal_type: str, age, pet_photo: str):
+        # Согласно спецификации тип поля "age" должен быть "int", в действительности сервер принимает это поле
+        # с типом "str". Однако, чтобы этот баг не блокировал другие тесты, в которых это не важно, здесь
+        # при его описании тип не указан, а задаётся неявно в тестовых методах присвоением нужного типа данных
+
         data = MultipartEncoder(
             fields={
                 'name': name,
@@ -75,7 +79,8 @@ class PetFriends:
             result = res.text
         return status, result
 
-    def post_add_new_pet_no_photo(self, auth_key: str, name: str, animal_type: str, age: int):
+    def post_add_new_pet_no_photo(self, auth_key: str, name, animal_type: str, age: int):
+        # Поле "name" не имеет явного типа для негативного тестирования задания не строкового значения
         data = {
             'name': name,
             'animal_type': animal_type,

@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9181c972-1965-48c7-a434-d38b391caa7b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/mmedia/badphoto.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/termcolor-1.1.0-py3.9.egg-info/PKG-INFO" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/termcolor-1.1.0-py3.9.egg-info/SOURCES.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/termcolor-1.1.0-py3.9.egg-info/dependency_links.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/termcolor-1.1.0-py3.9.egg-info/installed-files.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/termcolor-1.1.0-py3.9.egg-info/top_level.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/termcolor.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api.py" beforeDir="false" afterPath="$PROJECT_DIR$/api.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mmedia/testfile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mmedia/testfile.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_pet_friends.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_pet_friends.py" afterDir="false" />
     </list>
@@ -34,7 +43,7 @@
       <recent name="Z:\Project\Project.py\Module_19.7_Project\tests" />
     </key>
   </component>
-  <component name="RunManager" selected="Python tests.pytest for test_pet_friends.test_negative_post_new_usernotvalid_email">
+  <component name="RunManager" selected="Python tests.pytest for test_pet_friends.test_negative_post_create_new_pet_no_photo_long_name">
     <configuration name="Python 3.9" type="PythonConfigurationType" factoryName="Python">
       <module name="Module_19.7_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -72,7 +81,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for get_token.test_get_api_key_for_valid_user" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_pet_friends.test_negative_post_create_new_pet_no_photo_age_is_under_zero" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Module_19.7_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -84,11 +93,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;get_token.test_get_api_key_for_valid_user&quot;" />
+      <option name="_new_target" value="&quot;test_pet_friends.test_negative_post_create_new_pet_no_photo_age_is_under_zero&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_pet_friends.test_get_list_of_all_pets_valid_key" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_pet_friends.test_negative_post_create_new_pet_no_photo_long_name" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Module_19.7_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -100,11 +109,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pet_friends.test_get_list_of_all_pets_valid_key&quot;" />
+      <option name="_new_target" value="&quot;test_pet_friends.test_negative_post_create_new_pet_no_photo_long_name&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_pet_friends.test_negative_post_new_usernotvalid_email" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_pet_friends.test_negative_post_create_new_pet_no_photo_name_type_integer" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Module_19.7_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -116,11 +125,11 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pet_friends.test_negative_post_new_usernotvalid_email&quot;" />
+      <option name="_new_target" value="&quot;test_pet_friends.test_negative_post_create_new_pet_no_photo_name_type_integer&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_pet_friends.test_positive_get_list_of_my_pets_valid_key" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+    <configuration name="pytest for test_pet_friends.test_negative_post_create_new_pet_with_bad_photo" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="Module_19.7_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,24 +141,42 @@
       <option name="_new_keywords" value="&quot;&quot;" />
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_pet_friends.test_positive_get_list_of_my_pets_valid_key&quot;" />
+      <option name="_new_target" value="&quot;test_pet_friends.test_negative_post_create_new_pet_with_bad_photo&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pytest for test_pet_friends.test_negative_post_create_new_pet_with_txt_photo" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="Module_19.7_Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_pet_friends.test_negative_post_create_new_pet_with_txt_photo&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Python.Python 3.9" />
       <item itemvalue="Python tests.All tests at once" />
-      <item itemvalue="Python tests.pytest for get_token.test_get_api_key_for_valid_user" />
-      <item itemvalue="Python tests.pytest for test_pet_friends.test_get_list_of_all_pets_valid_key" />
-      <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_new_usernotvalid_email" />
-      <item itemvalue="Python tests.pytest for test_pet_friends.test_positive_get_list_of_my_pets_valid_key" />
+      <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_create_new_pet_with_bad_photo" />
+      <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_create_new_pet_with_txt_photo" />
+      <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_create_new_pet_no_photo_name_type_integer" />
+      <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_create_new_pet_no_photo_age_is_under_zero" />
+      <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_create_new_pet_no_photo_long_name" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_new_usernotvalid_email" />
-        <item itemvalue="Python tests.pytest for test_pet_friends.test_positive_get_list_of_my_pets_valid_key" />
-        <item itemvalue="Python tests.pytest for test_pet_friends.test_get_list_of_all_pets_valid_key" />
-        <item itemvalue="Python tests.pytest for get_token.test_get_api_key_for_valid_user" />
+        <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_create_new_pet_no_photo_long_name" />
+        <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_create_new_pet_no_photo_age_is_under_zero" />
+        <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_create_new_pet_no_photo_name_type_integer" />
+        <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_create_new_pet_with_txt_photo" />
+        <item itemvalue="Python tests.pytest for test_pet_friends.test_negative_post_create_new_pet_with_bad_photo" />
       </list>
     </recent_temporary>
   </component>
